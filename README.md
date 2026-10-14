@@ -1,8 +1,7 @@
 # SHAP-guided Robustness Evaluation of Deep Learning-based Smart-home NIDSs
 
 This repository contains the code and experiments for the paper
-**"SHAP-guided Robustness Evaluation of Deep Learning-based Smart-home NIDSs"**
-(M. D'Avino, L. Fienga, A. Roscigno, University of Naples Federico II).
+**"SHAP-guided Robustness Evaluation of Deep Learning-based Smart-home NIDSs"**.
 
 ## Overview
 
