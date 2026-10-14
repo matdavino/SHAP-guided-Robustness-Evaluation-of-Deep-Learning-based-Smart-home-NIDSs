@@ -71,7 +71,9 @@ Larger search budgets and multi-feature perturbations, packet-level validation,
 additional datasets and model families, and defensive uses such as adversarial
 training.
 
-## References
+## Contributors
+* **Matteo D'Avino** M63001724
+* **Luigi Fienga** M63001733
+* **Andrea Roscigno** M63001778
 
-Dataset: [ToN-IoT](https://research.unsw.edu.au/projects/toniot-datasets) ·
-SHAP: Lundberg & Lee, NeurIPS 2017 · Mamba: Gu & Dao, 2023.
+
