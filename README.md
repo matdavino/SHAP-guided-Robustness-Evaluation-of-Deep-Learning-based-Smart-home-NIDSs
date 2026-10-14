@@ -45,19 +45,6 @@ a new adversarial attack.
 - Successful evasions concentrate on a few features, mainly **Packet Length (PL)**
   and **Time To Live (TTL)**.
 
-## Repository structure
-
-> Adapt this section to the actual layout of the project.
-
-```
-├── data/            # ToN-IoT preprocessing and splits
-├── models/          # LopezCNN, BiflowTransformer, NetMamba
-├── explain/         # SHAP computation and aggregation
-├── attacks/         # perturbations (untargeted, benign-targeted, random)
-├── results/         # tables and figures (ASR/AMSP heatmaps, class-wise analysis)
-└── README.md
-```
-
 ## Limitations
 
 The evaluation is performed in feature space with a bounded search budget
