@@ -1,0 +1,577 @@
+PREP_DF ton-iot_100pkts_firstDIRfixed_PLfixed_6f_1p-mt1m_10p-mt100k_clean_uniform-label_6classes.parquet /kaggle/working/project/data/datasets/ton-iot/ton-iot_100pkts_firstDIRfixed_PLfixed_6f_1p-mt1m_10p-mt100k_clean_uniform-label_6classes_prep100.parquet True
+WARNING: using pre-processed dataframe.
+Class order:  [1, 2, 4, 3, 5, 0]
+Train loader: [<torch.utils.data.dataloader.DataLoader object at 0x7a81ed622c30>]
+max_task=1
+NetMamba
+LLL_Net(
+  (model): NetMamba(
+    (input_proj): Linear(in_features=6, out_features=128, bias=True)
+    (pos_embed): PositionalEncoding(
+      (dropout): Identity()
+    )
+    (blocks): ModuleList(
+      (0-3): 4 x MambaBlock(
+        (norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (mixer): Mamba(
+          (in_proj): Linear(in_features=128, out_features=512, bias=False)
+          (conv1d): Conv1d(256, 256, kernel_size=(4,), stride=(1,), padding=(3,), groups=256)
+          (act): SiLU()
+          (x_proj): Linear(in_features=256, out_features=40, bias=False)
+          (dt_proj): Linear(in_features=8, out_features=256, bias=True)
+          (out_proj): Linear(in_features=256, out_features=128, bias=False)
+        )
+      )
+    )
+    (norm_f): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+    (fc1): Linear(in_features=128, out_features=128, bias=True)
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+0
+-0.7546971 
+0.0 
+128.0 
+0.0 
+7851.996 
+256.0 
+-2.8188124 
+-8.146382 
+4.3604527 
+-2.5296683 
+3.0809977 
+-1187.0928 
+-9.640457 
+128.0 
+0.0 
+7851.996 
+256.0 
+29.402725 
+-8.381393 
+-0.45309538 
+-4.585192 
+-1.7660446 
+-1197.6335 
+-0.4518392 
+128.0 
+0.0 
+7851.996 
+256.0 
+16.910542 
+28.327232 
+-4.441015 
+-0.19881439 
+8.327815 
+-1161.7771 
+8.125092 
+128.0 
+0.0 
+7851.996 
+256.0 
+-7.421022 
+6.6578007 
+-5.3031697 
+5.171029 
+-16.442263 
+-1151.2798 
+-0.97613263 
+128.0 
+0.0 
+2.346302 
+0.0 
+-2.9054794 
+-0.0813776 
+************************************************************************************************************
+| Epoch   1, time=30.045s | Train: skip eval | Valid: time=3.128s loss=0.312, TAw acc=91.729% | *
+| Epoch   2, time=30.405s | Train: skip eval | Valid: time=2.848s loss=0.136, TAw acc=95.336% | *
+| Epoch   3, time=31.991s | Train: skip eval | Valid: time=2.807s loss=0.403, TAw acc=84.989% |
+
+| Epoch   4, time=32.412s | Train: skip eval | Valid: time=2.813s loss=0.108, TAw acc=96.476% | *
+| Epoch   5, time=31.770s | Train: skip eval | Valid: time=2.788s loss=0.105, TAw acc=96.422% | *
+| Epoch   6, time=32.093s | Train: skip eval | Valid: time=3.168s loss=0.085, TAw acc=96.885% | *
+| Epoch   7, time=31.960s | Train: skip eval | Valid: time=2.799s loss=0.085, TAw acc=97.069% | *
+| Epoch   8, time=31.946s | Train: skip eval | Valid: time=2.796s loss=0.074, TAw acc=97.134% | *
+| Epoch   9, time=31.954s | Train: skip eval | Valid: time=2.802s loss=0.102, TAw acc=96.387% |
+
+| Epoch  10, time=31.928s | Train: skip eval | Valid: time=2.801s loss=0.074, TAw acc=97.164% |
+
+| Epoch  11, time=32.012s | Train: skip eval | Valid: time=2.807s loss=0.071, TAw acc=97.330% | *
+| Epoch  12, time=32.010s | Train: skip eval | Valid: time=3.150s loss=0.071, TAw acc=97.247% | *
+| Epoch  13, time=32.037s | Train: skip eval | Valid: time=2.863s loss=0.071, TAw acc=97.253% |
+
+| Epoch  14, time=31.917s | Train: skip eval | Valid: time=2.819s loss=0.076, TAw acc=97.330% |
+
+| Epoch  15, time=31.955s | Train: skip eval | Valid: time=2.813s loss=0.067, TAw acc=97.395% | *
+| Epoch  16, time=32.022s | Train: skip eval | Valid: time=2.794s loss=0.067, TAw acc=97.407% |
+
+| Epoch  17, time=31.938s | Train: skip eval | Valid: time=2.771s loss=0.068, TAw acc=97.348% |
+
+| Epoch  18, time=31.990s | Train: skip eval | Valid: time=3.137s loss=0.073, TAw acc=97.122% |
+
+| Epoch  19, time=32.005s | Train: skip eval | Valid: time=2.797s loss=0.062, TAw acc=97.496% | *
+| Epoch  20, time=31.939s | Train: skip eval | Valid: time=2.804s loss=0.062, TAw acc=97.449% |
+
+| Epoch  21, time=31.926s | Train: skip eval | Valid: time=2.864s loss=0.061, TAw acc=97.502% | *
+| Epoch  22, time=31.970s | Train: skip eval | Valid: time=2.848s loss=0.066, TAw acc=97.366% |
+
+| Epoch  23, time=31.974s | Train: skip eval | Valid: time=3.102s loss=0.062, TAw acc=97.555% |
+
+| Epoch  24, time=31.955s | Train: skip eval | Valid: time=2.790s loss=0.061, TAw acc=97.550% | *
+| Epoch  25, time=32.018s | Train: skip eval | Valid: time=2.803s loss=0.060, TAw acc=97.561% | *
+| Epoch  26, time=31.940s | Train: skip eval | Valid: time=2.811s loss=0.066, TAw acc=97.449% |
+
+| Epoch  27, time=31.954s | Train: skip eval | Valid: time=2.788s loss=0.110, TAw acc=96.037% |
+
+| Epoch  28, time=31.851s | Train: skip eval | Valid: time=2.794s loss=0.060, TAw acc=97.496% | *
+| Epoch  29, time=31.954s | Train: skip eval | Valid: time=3.154s loss=0.058, TAw acc=97.478% | *
+| Epoch  30, time=31.969s | Train: skip eval | Valid: time=2.794s loss=0.072, TAw acc=97.004% |
+
+| Epoch  31, time=32.073s | Train: skip eval | Valid: time=2.814s loss=0.086, TAw acc=97.176% |
+
+| Epoch  32, time=31.933s | Train: skip eval | Valid: time=2.803s loss=0.103, TAw acc=96.576% |
+
+| Epoch  33, time=31.917s | Train: skip eval | Valid: time=2.847s loss=0.070, TAw acc=97.348% |
+
+| Epoch  34, time=31.916s | Train: skip eval | Valid: time=2.801s loss=0.062, TAw acc=97.502% |
+
+| Epoch  35, time=31.930s | Train: skip eval | Valid: time=3.138s loss=0.069, TAw acc=97.413% |
+
+| Epoch  36, time=31.915s | Train: skip eval | Valid: time=2.800s loss=0.059, TAw acc=97.520% |
+
+| Epoch  37, time=31.995s | Train: skip eval | Valid: time=2.874s loss=0.103, TAw acc=96.582% |
+
+| Epoch  38, time=31.911s | Train: skip eval | Valid: time=2.788s loss=0.066, TAw acc=97.354% |
+
+| Epoch  39, time=31.942s | Train: skip eval | Valid: time=2.841s loss=0.061, TAw acc=97.496% |
+
+| Epoch  40, time=31.980s | Train: skip eval | Valid: time=3.179s loss=0.058, TAw acc=97.377% | *
+| Epoch  41, time=31.957s | Train: skip eval | Valid: time=2.865s loss=0.056, TAw acc=97.413% | *
+| Epoch  42, time=31.985s | Train: skip eval | Valid: time=2.818s loss=0.057, TAw acc=97.360% |
+
+| Epoch  43, time=31.985s | Train: skip eval | Valid: time=2.831s loss=0.067, TAw acc=99.163% |
+
+| Epoch  44, time=32.004s | Train: skip eval | Valid: time=2.865s loss=0.056, TAw acc=97.401% | *
+| Epoch  45, time=32.001s | Train: skip eval | Valid: time=2.858s loss=0.052, TAw acc=97.609% | *
+| Epoch  46, time=31.954s | Train: skip eval | Valid: time=3.138s loss=0.051, TAw acc=97.621% | *
+| Epoch  47, time=31.954s | Train: skip eval | Valid: time=2.838s loss=0.068, TAw acc=95.402% |
+
+| Epoch  48, time=31.959s | Train: skip eval | Valid: time=2.803s loss=0.059, TAw acc=99.128% |
+
+| Epoch  49, time=31.993s | Train: skip eval | Valid: time=2.845s loss=0.059, TAw acc=99.193% |
+
+| Epoch  50, time=31.911s | Train: skip eval | Valid: time=2.800s loss=0.058, TAw acc=95.710% |
+
+| Epoch  51, time=32.015s | Train: skip eval | Valid: time=3.181s loss=0.061, TAw acc=97.567% |
+
+| Epoch  52, time=31.986s | Train: skip eval | Valid: time=2.804s loss=0.058, TAw acc=97.461% |
+
+| Epoch  53, time=31.946s | Train: skip eval | Valid: time=2.835s loss=0.049, TAw acc=97.633% | *
+| Epoch  54, time=31.910s | Train: skip eval | Valid: time=2.793s loss=0.052, TAw acc=97.490% |
+
+| Epoch  55, time=31.919s | Train: skip eval | Valid: time=2.865s loss=0.085, TAw acc=95.396% |
+
+| Epoch  56, time=31.905s | Train: skip eval | Valid: time=2.796s loss=0.066, TAw acc=97.372% |
+
+| Epoch  57, time=31.866s | Train: skip eval | Valid: time=3.195s loss=0.920, TAw acc=64.768% |
+
+| Epoch  58, time=31.887s | Train: skip eval | Valid: time=2.790s loss=1.555, TAw acc=36.543% |
+
+| Epoch  59, time=31.562s | Train: skip eval | Valid: time=2.812s loss=1.555, TAw acc=36.543% |
+
+| Epoch  60, time=31.596s | Train: skip eval | Valid: time=2.789s loss=1.555, TAw acc=36.543% |
+
+| Epoch  61, time=31.701s | Train: skip eval | Valid: time=2.789s loss=1.555, TAw acc=36.543% |
+
+| Epoch  62, time=31.577s | Train: skip eval | Valid: time=2.782s loss=1.555, TAw acc=36.543% |
+
+| Epoch  63, time=31.615s | Train: skip eval | Valid: time=3.125s loss=1.555, TAw acc=36.543% |
+
+| Epoch  64, time=31.562s | Train: skip eval | Valid: time=2.807s loss=1.555, TAw acc=36.543% |
+
+| Epoch  65, time=31.687s | Train: skip eval | Valid: time=2.804s loss=1.555, TAw acc=36.543% |
+
+| Epoch  66, time=32.007s | Train: skip eval | Valid: time=2.984s loss=1.555, TAw acc=36.543% |
+
+| Epoch  67, time=31.848s | Train: skip eval | Valid: time=2.814s loss=1.556, TAw acc=36.543% |
+
+| Epoch  68, time=31.766s | Train: skip eval | Valid: time=3.211s loss=1.555, TAw acc=36.543% |
+
+| Epoch  69, time=31.680s | Train: skip eval | Valid: time=2.809s loss=1.555, TAw acc=36.543% |
+
+| Epoch  70, time=31.695s | Train: skip eval | Valid: time=2.888s loss=1.555, TAw acc=36.543% |
+
+| Epoch  71, time=31.709s | Train: skip eval | Valid: time=2.843s loss=1.555, TAw acc=36.543% |
+
+| Epoch  72, time=31.694s | Train: skip eval | Valid: time=2.856s loss=1.555, TAw acc=36.543% |
+
+| Epoch  73, time=31.735s | Train: skip eval | Valid: time=2.832s loss=1.555, TAw acc=36.543% |
+ lr=3.3e-02
+| Epoch  74, time=31.993s | Train: skip eval | Valid: time=3.177s loss=0.040, TAw acc=97.597% | *
+| Epoch  75, time=31.890s | Train: skip eval | Valid: time=2.799s loss=0.055, TAw acc=97.650% |
+
+| Epoch  76, time=31.952s | Train: skip eval | Valid: time=2.849s loss=0.048, TAw acc=97.502% |
+
+| Epoch  77, time=31.934s | Train: skip eval | Valid: time=2.819s loss=0.053, TAw acc=97.615% |
+
+| Epoch  78, time=32.007s | Train: skip eval | Valid: time=2.843s loss=0.029, TAw acc=99.235% | *
+| Epoch  79, time=31.881s | Train: skip eval | Valid: time=3.134s loss=0.047, TAw acc=97.621% |
+
+| Epoch  80, time=31.842s | Train: skip eval | Valid: time=2.830s loss=0.061, TAw acc=97.579% |
+
+| Epoch  81, time=32.019s | Train: skip eval | Valid: time=2.815s loss=0.026, TAw acc=99.353% | *
+| Epoch  82, time=31.961s | Train: skip eval | Valid: time=2.883s loss=0.031, TAw acc=99.353% |
+
+| Epoch  83, time=31.853s | Train: skip eval | Valid: time=2.843s loss=0.033, TAw acc=99.359% |
+
+| Epoch  84, time=31.951s | Train: skip eval | Valid: time=2.863s loss=0.041, TAw acc=97.591% |
+
+| Epoch  85, time=31.969s | Train: skip eval | Valid: time=3.166s loss=0.061, TAw acc=97.567% |
+
+| Epoch  86, time=31.937s | Train: skip eval | Valid: time=2.757s loss=0.075, TAw acc=95.550% |
+
+| Epoch  87, time=32.010s | Train: skip eval | Valid: time=2.869s loss=0.046, TAw acc=99.063% |
+
+| Epoch  88, time=31.967s | Train: skip eval | Valid: time=2.796s loss=0.040, TAw acc=99.152% |
+
+| Epoch  89, time=32.003s | Train: skip eval | Valid: time=2.805s loss=0.062, TAw acc=97.455% |
+
+| Epoch  90, time=31.951s | Train: skip eval | Valid: time=2.828s loss=0.057, TAw acc=99.074% |
+
+| Epoch  91, time=31.977s | Train: skip eval | Valid: time=3.121s loss=0.039, TAw acc=99.395% |
+
+| Epoch  92, time=31.961s | Train: skip eval | Valid: time=2.792s loss=0.059, TAw acc=99.140% |
+
+| Epoch  93, time=31.970s | Train: skip eval | Valid: time=2.797s loss=0.058, TAw acc=99.371% |
+
+| Epoch  94, time=31.924s | Train: skip eval | Valid: time=2.800s loss=0.050, TAw acc=99.330% |
+
+| Epoch  95, time=31.949s | Train: skip eval | Valid: time=2.810s loss=0.040, TAw acc=97.603% |
+
+| Epoch  96, time=31.937s | Train: skip eval | Valid: time=3.169s loss=0.088, TAw acc=96.713% |
+
+| Epoch  97, time=32.049s | Train: skip eval | Valid: time=2.829s loss=0.072, TAw acc=97.021% |
+
+| Epoch  98, time=31.984s | Train: skip eval | Valid: time=2.816s loss=0.065, TAw acc=97.223% |
+
+| Epoch  99, time=31.982s | Train: skip eval | Valid: time=2.842s loss=0.062, TAw acc=97.360% |
+
+| Epoch 100, time=32.006s | Train: skip eval | Valid: time=2.827s loss=0.063, TAw acc=97.348% |
+
+| Epoch 101, time=32.037s | Train: skip eval | Valid: time=2.877s loss=0.099, TAw acc=95.247% |
+ lr=1.1e-02
+| Epoch 102, time=32.207s | Train: skip eval | Valid: time=3.227s loss=0.024, TAw acc=99.383% | *
+| Epoch 103, time=31.873s | Train: skip eval | Valid: time=2.840s loss=0.024, TAw acc=99.383% | *
+| Epoch 104, time=31.986s | Train: skip eval | Valid: time=2.799s loss=0.024, TAw acc=99.383% | *
+| Epoch 105, time=31.948s | Train: skip eval | Valid: time=2.823s loss=0.024, TAw acc=99.330% |
+
+| Epoch 106, time=31.913s | Train: skip eval | Valid: time=2.799s loss=0.027, TAw acc=99.270% |
+
+| Epoch 107, time=31.983s | Train: skip eval | Valid: time=3.140s loss=0.025, TAw acc=99.324% |
+
+| Epoch 108, time=31.947s | Train: skip eval | Valid: time=2.798s loss=0.025, TAw acc=99.359% |
+
+| Epoch 109, time=31.951s | Train: skip eval | Valid: time=2.842s loss=0.024, TAw acc=99.359% |
+
+| Epoch 110, time=31.955s | Train: skip eval | Valid: time=2.804s loss=0.023, TAw acc=99.395% | *
+| Epoch 111, time=31.985s | Train: skip eval | Valid: time=2.810s loss=0.025, TAw acc=99.413% |
+
+| Epoch 112, time=31.933s | Train: skip eval | Valid: time=2.826s loss=0.023, TAw acc=99.407% | *
+| Epoch 113, time=31.857s | Train: skip eval | Valid: time=3.145s loss=0.023, TAw acc=99.383% |
+
+| Epoch 114, time=31.990s | Train: skip eval | Valid: time=2.794s loss=0.029, TAw acc=99.335% |
+
+| Epoch 115, time=31.977s | Train: skip eval | Valid: time=2.801s loss=0.027, TAw acc=99.413% |
+
+| Epoch 116, time=31.883s | Train: skip eval | Valid: time=2.820s loss=0.024, TAw acc=99.401% |
+
+| Epoch 117, time=31.874s | Train: skip eval | Valid: time=2.892s loss=0.025, TAw acc=99.401% |
+
+| Epoch 118, time=31.903s | Train: skip eval | Valid: time=2.814s loss=0.024, TAw acc=99.407% |
+
+| Epoch 119, time=31.898s | Train: skip eval | Valid: time=3.224s loss=0.024, TAw acc=99.407% |
+
+| Epoch 120, time=31.963s | Train: skip eval | Valid: time=2.850s loss=0.024, TAw acc=99.407% |
+
+| Epoch 121, time=31.866s | Train: skip eval | Valid: time=2.869s loss=0.024, TAw acc=99.407% |
+
+| Epoch 122, time=31.879s | Train: skip eval | Valid: time=2.800s loss=0.024, TAw acc=99.407% |
+
+| Epoch 123, time=31.877s | Train: skip eval | Valid: time=2.850s loss=0.024, TAw acc=99.401% |
+
+| Epoch 124, time=31.856s | Train: skip eval | Valid: time=3.158s loss=0.024, TAw acc=99.419% |
+
+| Epoch 125, time=31.880s | Train: skip eval | Valid: time=2.839s loss=0.024, TAw acc=99.407% |
+
+| Epoch 126, time=32.015s | Train: skip eval | Valid: time=2.840s loss=0.027, TAw acc=99.407% |
+
+| Epoch 127, time=31.835s | Train: skip eval | Valid: time=2.823s loss=0.024, TAw acc=99.389% |
+
+| Epoch 128, time=31.809s | Train: skip eval | Valid: time=2.818s loss=0.024, TAw acc=99.401% |
+
+| Epoch 129, time=31.900s | Train: skip eval | Valid: time=2.883s loss=0.024, TAw acc=99.401% |
+
+| Epoch 130, time=32.027s | Train: skip eval | Valid: time=3.167s loss=0.026, TAw acc=99.389% |
+
+| Epoch 131, time=32.020s | Train: skip eval | Valid: time=2.882s loss=0.064, TAw acc=95.781% |
+
+| Epoch 132, time=31.915s | Train: skip eval | Valid: time=2.824s loss=0.023, TAw acc=99.389% |
+ lr=3.7e-03
+| Epoch 133, time=32.012s | Train: skip eval | Valid: time=2.862s loss=0.023, TAw acc=99.395% | *
+| Epoch 134, time=31.996s | Train: skip eval | Valid: time=2.818s loss=0.023, TAw acc=99.407% | *
+| Epoch 135, time=31.925s | Train: skip eval | Valid: time=3.235s loss=0.023, TAw acc=99.407% | *
+| Epoch 136, time=31.962s | Train: skip eval | Valid: time=2.851s loss=0.023, TAw acc=99.389% |
+
+| Epoch 137, time=32.161s | Train: skip eval | Valid: time=2.856s loss=0.023, TAw acc=99.407% |
+
+| Epoch 138, time=31.929s | Train: skip eval | Valid: time=2.851s loss=0.023, TAw acc=99.419% |
+
+| Epoch 139, time=31.946s | Train: skip eval | Valid: time=2.830s loss=0.024, TAw acc=99.377% |
+
+| Epoch 140, time=31.949s | Train: skip eval | Valid: time=2.792s loss=0.023, TAw acc=99.413% | *
+| Epoch 141, time=31.880s | Train: skip eval | Valid: time=3.193s loss=0.023, TAw acc=99.389% |
+
+| Epoch 142, time=31.894s | Train: skip eval | Valid: time=2.816s loss=0.023, TAw acc=99.413% |
+
+| Epoch 143, time=31.919s | Train: skip eval | Valid: time=2.883s loss=0.023, TAw acc=99.401% |
+
+| Epoch 144, time=31.973s | Train: skip eval | Valid: time=2.832s loss=0.023, TAw acc=99.413% |
+
+| Epoch 145, time=31.959s | Train: skip eval | Valid: time=2.845s loss=0.023, TAw acc=99.424% | *
+| Epoch 146, time=32.040s | Train: skip eval | Valid: time=2.812s loss=0.023, TAw acc=99.430% |
+
+| Epoch 147, time=32.067s | Train: skip eval | Valid: time=3.147s loss=0.023, TAw acc=99.419% |
+
+| Epoch 148, time=31.876s | Train: skip eval | Valid: time=2.782s loss=0.022, TAw acc=99.413% | *
+| Epoch 149, time=31.960s | Train: skip eval | Valid: time=2.847s loss=0.023, TAw acc=99.430% |
+
+| Epoch 150, time=31.975s | Train: skip eval | Valid: time=2.797s loss=0.023, TAw acc=99.383% |
+
+| Epoch 151, time=31.876s | Train: skip eval | Valid: time=2.844s loss=0.023, TAw acc=99.424% |
+
+| Epoch 152, time=31.920s | Train: skip eval | Valid: time=3.137s loss=0.023, TAw acc=99.424% |
+
+| Epoch 153, time=31.950s | Train: skip eval | Valid: time=2.893s loss=0.023, TAw acc=99.424% |
+
+| Epoch 154, time=31.984s | Train: skip eval | Valid: time=2.852s loss=0.023, TAw acc=99.401% |
+
+| Epoch 155, time=31.878s | Train: skip eval | Valid: time=2.873s loss=0.023, TAw acc=99.424% |
+
+| Epoch 156, time=31.951s | Train: skip eval | Valid: time=2.872s loss=0.023, TAw acc=99.436% |
+
+| Epoch 157, time=31.896s | Train: skip eval | Valid: time=2.812s loss=0.023, TAw acc=99.407% |
+
+| Epoch 158, time=31.867s | Train: skip eval | Valid: time=3.128s loss=0.023, TAw acc=99.419% |
+
+| Epoch 159, time=31.894s | Train: skip eval | Valid: time=2.796s loss=0.023, TAw acc=99.407% |
+
+| Epoch 160, time=31.997s | Train: skip eval | Valid: time=2.804s loss=0.023, TAw acc=99.413% |
+
+| Epoch 161, time=31.783s | Train: skip eval | Valid: time=2.803s loss=0.049, TAw acc=97.674% |
+
+| Epoch 162, time=31.853s | Train: skip eval | Valid: time=2.787s loss=0.022, TAw acc=99.424% | *
+| Epoch 163, time=31.865s | Train: skip eval | Valid: time=3.134s loss=0.023, TAw acc=99.430% |
+
+| Epoch 164, time=31.974s | Train: skip eval | Valid: time=2.815s loss=0.023, TAw acc=99.413% |
+
+| Epoch 165, time=31.933s | Train: skip eval | Valid: time=2.788s loss=0.023, TAw acc=99.424% |
+
+| Epoch 166, time=31.848s | Train: skip eval | Valid: time=2.815s loss=0.023, TAw acc=99.419% |
+
+| Epoch 167, time=31.874s | Train: skip eval | Valid: time=2.813s loss=0.023, TAw acc=99.407% |
+
+| Epoch 168, time=31.924s | Train: skip eval | Valid: time=2.780s loss=0.023, TAw acc=99.419% |
+
+| Epoch 169, time=31.795s | Train: skip eval | Valid: time=3.163s loss=0.023, TAw acc=99.407% |
+
+| Epoch 170, time=31.842s | Train: skip eval | Valid: time=2.859s loss=0.023, TAw acc=99.448% |
+
+| Epoch 171, time=31.925s | Train: skip eval | Valid: time=2.780s loss=0.022, TAw acc=99.442% | *
+| Epoch 172, time=31.897s | Train: skip eval | Valid: time=2.843s loss=0.023, TAw acc=99.419% |
+
+| Epoch 173, time=31.808s | Train: skip eval | Valid: time=2.809s loss=0.023, TAw acc=99.419% |
+
+| Epoch 174, time=31.855s | Train: skip eval | Valid: time=2.855s loss=0.023, TAw acc=99.407% |
+
+| Epoch 175, time=31.991s | Train: skip eval | Valid: time=3.185s loss=0.023, TAw acc=99.419% |
+
+| Epoch 176, time=32.546s | Train: skip eval | Valid: time=2.892s loss=0.023, TAw acc=99.424% |
+
+| Epoch 177, time=32.145s | Train: skip eval | Valid: time=2.814s loss=0.024, TAw acc=99.430% |
+
+| Epoch 178, time=31.951s | Train: skip eval | Valid: time=2.871s loss=0.022, TAw acc=99.442% |
+
+| Epoch 179, time=31.917s | Train: skip eval | Valid: time=2.837s loss=0.023, TAw acc=99.413% |
+
+| Epoch 180, time=31.986s | Train: skip eval | Valid: time=3.256s loss=0.023, TAw acc=99.395% |
+
+| Epoch 181, time=31.974s | Train: skip eval | Valid: time=2.829s loss=0.023, TAw acc=99.424% |
+
+| Epoch 182, time=31.919s | Train: skip eval | Valid: time=2.877s loss=0.023, TAw acc=99.401% |
+
+| Epoch 183, time=31.927s | Train: skip eval | Valid: time=2.830s loss=0.023, TAw acc=99.413% |
+
+| Epoch 184, time=31.882s | Train: skip eval | Valid: time=2.855s loss=0.023, TAw acc=99.419% |
+
+| Epoch 185, time=31.894s | Train: skip eval | Valid: time=2.848s loss=0.023, TAw acc=99.436% |
+
+| Epoch 186, time=31.894s | Train: skip eval | Valid: time=3.230s loss=0.023, TAw acc=99.436% |
+
+| Epoch 187, time=31.964s | Train: skip eval | Valid: time=2.841s loss=0.023, TAw acc=99.448% |
+
+| Epoch 188, time=31.979s | Train: skip eval | Valid: time=2.893s loss=0.023, TAw acc=99.442% |
+
+| Epoch 189, time=31.975s | Train: skip eval | Valid: time=2.835s loss=0.023, TAw acc=99.424% |
+
+| Epoch 190, time=31.986s | Train: skip eval | Valid: time=2.879s loss=0.023, TAw acc=99.430% |
+
+| Epoch 191, time=32.057s | Train: skip eval | Valid: time=3.264s loss=0.023, TAw acc=99.460% |
+ lr=1.2e-03
+| Epoch 192, time=32.003s | Train: skip eval | Valid: time=2.834s loss=0.022, TAw acc=99.436% |
+
+| Epoch 193, time=31.900s | Train: skip eval | Valid: time=2.828s loss=0.022, TAw acc=99.436% | *
+| Epoch 194, time=31.886s | Train: skip eval | Valid: time=2.854s loss=0.022, TAw acc=99.430% |
+
+| Epoch 195, time=31.912s | Train: skip eval | Valid: time=2.788s loss=0.022, TAw acc=99.454% |
+
+| Epoch 196, time=31.986s | Train: skip eval | Valid: time=2.865s loss=0.022, TAw acc=99.448% |
+
+| Epoch 197, time=31.936s | Train: skip eval | Valid: time=3.183s loss=0.022, TAw acc=99.430% |
+
+| Epoch 198, time=31.976s | Train: skip eval | Valid: time=2.886s loss=0.022, TAw acc=99.436% |
+
+| Epoch 199, time=32.163s | Train: skip eval | Valid: time=3.158s loss=0.022, TAw acc=99.430% |
+
+| Epoch 200, time=32.605s | Train: skip eval | Valid: time=2.900s loss=0.024, TAw acc=99.454% |
+
+| Train Time: pre_train=0.004s, train=6962.369s, post_train=0.000s |
+-0.755167 
+-1.8388033e-05 
+115.4787 
+0.5216483 
+7852.5156 
+257.84576 
+-3.734008 
+-3.303527 
+-0.339638 
+-10.532997 
+4.682233 
+-1187.9408 
+-9.640537 
+128.21817 
+-0.050667793 
+7852.107 
+257.9755 
+29.354517 
+-9.749993 
+-0.45537633 
+-2.780812 
+-2.3710074 
+-1197.3845 
+-0.45197248 
+131.28784 
+-0.06049469 
+7851.9165 
+256.91937 
+16.913715 
+30.588757 
+-3.862069 
+-5.4936204 
+8.014896 
+-1161.4856 
+8.125046 
+136.25452 
+0.1866833 
+7852.094 
+260.01263 
+-7.5569167 
+5.781798 
+-5.0965466 
+3.3373573 
+-16.4359 
+-1150.9023 
+-0.9757323 
+139.60568 
+-0.10260984 
+4.6262627 
+-2.5966997 
+-2.8836174 
+-0.08154029 
+
+Unchanged
+model.input_proj.weight False
+model.input_proj.bias False
+model.blocks.0.norm.weight False
+model.blocks.0.norm.bias False
+model.blocks.0.mixer.A_log False
+model.blocks.0.mixer.D False
+model.blocks.0.mixer.in_proj.weight False
+model.blocks.0.mixer.conv1d.weight False
+model.blocks.0.mixer.conv1d.bias False
+model.blocks.0.mixer.x_proj.weight False
+model.blocks.0.mixer.dt_proj.weight False
+model.blocks.0.mixer.dt_proj.bias False
+model.blocks.0.mixer.out_proj.weight False
+model.blocks.1.norm.weight False
+model.blocks.1.norm.bias False
+model.blocks.1.mixer.A_log False
+model.blocks.1.mixer.D False
+model.blocks.1.mixer.in_proj.weight False
+model.blocks.1.mixer.conv1d.weight False
+model.blocks.1.mixer.conv1d.bias False
+model.blocks.1.mixer.x_proj.weight False
+model.blocks.1.mixer.dt_proj.weight False
+model.blocks.1.mixer.dt_proj.bias False
+model.blocks.1.mixer.out_proj.weight False
+model.blocks.2.norm.weight False
+model.blocks.2.norm.bias False
+model.blocks.2.mixer.A_log False
+model.blocks.2.mixer.D False
+model.blocks.2.mixer.in_proj.weight False
+model.blocks.2.mixer.conv1d.weight False
+model.blocks.2.mixer.conv1d.bias False
+model.blocks.2.mixer.x_proj.weight False
+model.blocks.2.mixer.dt_proj.weight False
+model.blocks.2.mixer.dt_proj.bias False
+model.blocks.2.mixer.out_proj.weight False
+model.blocks.3.norm.weight False
+model.blocks.3.norm.bias False
+model.blocks.3.mixer.A_log False
+model.blocks.3.mixer.D False
+model.blocks.3.mixer.in_proj.weight False
+model.blocks.3.mixer.conv1d.weight False
+model.blocks.3.mixer.conv1d.bias False
+model.blocks.3.mixer.x_proj.weight False
+model.blocks.3.mixer.dt_proj.weight False
+model.blocks.3.mixer.dt_proj.bias False
+model.blocks.3.mixer.out_proj.weight False
+model.norm_f.weight False
+model.norm_f.bias False
+model.fc1.weight False
+model.fc1.bias False
+heads.0.weight False
+heads.0.bias False
+
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.024 | TAw acc=99.430%, forg=0.000%| TAg acc=99.430%, forg=0.000%, time= 13.215, Num_instances= 72220 <<<
+Save at ./results/ton-iot_6classes_scratch_NetMamba
+************************************************************************************************************
+TAw Acc
+	 99.4% 	Avg.: 99.4% 
+************************************************************************************************************
+TAg Acc
+	 99.4% 	Avg.: 99.4% 
+************************************************************************************************************
+TAw Forg
+	  0.0% 
+************************************************************************************************************
+TAg Forg
+	  0.0% 
+************************************************************************************************************
+[Elapsed time = 1.9 h]
+Done!
